@@ -15,11 +15,11 @@
                 },
                 {
                     "name": "Touch",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "fdeab904-f90c-43ff-a86b-8a00f23051b9",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Tap"
                 },
                 {
                     "name": "Test",
@@ -101,6 +101,17 @@
                     "name": "",
                     "id": "6a51d235-a7f5-4f0b-ad5c-7c2d77445adf",
                     "path": "<Touchscreen>/press",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26549038-f40b-4bb5-94fc-ba32847eaaa2",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "Tap",
                     "processors": "",
                     "groups": "",

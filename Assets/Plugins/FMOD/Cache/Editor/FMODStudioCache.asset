@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3901983761146622401
+--- !u!114 &-3383921367641379365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Desktop/GameJam.strings.bank
   m_EditorClassIdentifier: 
-  Path: C:/FMOD Studio/gamejam2023/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638110445588256616
+  Path: C:/FMOD Studio/gamejam2023/Build/Desktop/GameJam.strings.bank
+  Name: Desktop/GameJam.strings
+  StudioPath: bank:/GameJam.strings
+  lastModified: 638110487430937375
   FileSizes:
-  - Name: Desktop
+  - Name: 
     Value: 712
+  Exists: 1
+--- !u!114 &-551464300328379844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/GameJam.bank
+  m_EditorClassIdentifier: 
+  Path: C:/FMOD Studio/gamejam2023/Build/Desktop/GameJam.bank
+  Name: Desktop/GameJam
+  StudioPath: bank:/GameJam
+  lastModified: 638110487430917423
+  FileSizes:
+  - Name: 
+    Value: 1036
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -33,33 +53,13 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3901983761146622401}
-  - {fileID: 6482404645286156925}
+  - {fileID: -3383921367641379365}
+  - {fileID: -551464300328379844}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6482404645286156925}
+  - {fileID: -551464300328379844}
   StringsBanks:
-  - {fileID: -3901983761146622401}
-  cacheTime: 638110445588256616
+  - {fileID: -3383921367641379365}
+  cacheTime: 638110487430937375
   cacheVersion: 131601
---- !u!114 &6482404645286156925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: C:/FMOD Studio/gamejam2023/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638110445588226974
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1

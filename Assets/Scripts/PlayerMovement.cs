@@ -31,11 +31,6 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void Test()
-    {
-        Debug.Log("wtf");
-    }
-
     void OnTest()
     {
         Debug.Log("wtf");

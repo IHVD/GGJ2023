@@ -21,7 +21,7 @@ MonoBehaviour:
   - {fileID: 3117284928791305712}
   StringsBanks:
   - {fileID: 3426813549924926744}
-  cacheTime: 638110493625024514
+  cacheTime: 638110618004688413
   cacheVersion: 131601
 --- !u!114 &2876748738358913161
 MonoBehaviour:
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: Assets/FMODStudio/Mobile/GameJam.bank
   Name: GameJam
   StudioPath: bank:/GameJam
-  lastModified: 638110493625024514
+  lastModified: 638110618004678457
   FileSizes: []
   Exists: 1
 --- !u!114 &3426813549924926744
@@ -74,7 +74,7 @@ MonoBehaviour:
   Path: Assets/FMODStudio/Mobile/GameJam.strings.bank
   Name: GameJam.strings
   StudioPath: bank:/GameJam.strings
-  lastModified: 638110493625024514
+  lastModified: 638110618004688413
   FileSizes:
   - Name: 
     Value: 712

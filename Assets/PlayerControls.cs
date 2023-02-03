@@ -28,11 +28,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Touch"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""fdeab904-f90c-43ff-a86b-8a00f23051b9"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Test"",
@@ -41,6 +41,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""TouchPressDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""25d25b5e-b04f-4721-930e-d6316dbbec9e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""TouchPressUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""7db9d7e8-353c-4777-a7e0-8fa724a5f04e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [
@@ -123,23 +139,34 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""26549038-f40b-4bb5-94fc-ba32847eaaa2"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Tap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Touch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""0d4c558c-7498-415a-9f8b-e429c7c7b9d5"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Test"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92960300-9690-41fc-8d2b-d768bce2db3f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPressDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c72865b9-b039-4747-bc4c-6b4e023187ce"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPressUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -153,6 +180,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player1_Move = m_Player1.FindAction("Move", throwIfNotFound: true);
         m_Player1_Touch = m_Player1.FindAction("Touch", throwIfNotFound: true);
         m_Player1_Test = m_Player1.FindAction("Test", throwIfNotFound: true);
+        m_Player1_TouchPressDown = m_Player1.FindAction("TouchPressDown", throwIfNotFound: true);
+        m_Player1_TouchPressUp = m_Player1.FindAction("TouchPressUp", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +234,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player1_Move;
     private readonly InputAction m_Player1_Touch;
     private readonly InputAction m_Player1_Test;
+    private readonly InputAction m_Player1_TouchPressDown;
+    private readonly InputAction m_Player1_TouchPressUp;
     public struct Player1Actions
     {
         private @PlayerControls m_Wrapper;
@@ -212,6 +243,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player1_Move;
         public InputAction @Touch => m_Wrapper.m_Player1_Touch;
         public InputAction @Test => m_Wrapper.m_Player1_Test;
+        public InputAction @TouchPressDown => m_Wrapper.m_Player1_TouchPressDown;
+        public InputAction @TouchPressUp => m_Wrapper.m_Player1_TouchPressUp;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -230,6 +263,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Test.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTest;
                 @Test.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTest;
                 @Test.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTest;
+                @TouchPressDown.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTouchPressDown;
+                @TouchPressDown.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTouchPressDown;
+                @TouchPressDown.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTouchPressDown;
+                @TouchPressUp.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTouchPressUp;
+                @TouchPressUp.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTouchPressUp;
+                @TouchPressUp.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTouchPressUp;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +282,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Test.started += instance.OnTest;
                 @Test.performed += instance.OnTest;
                 @Test.canceled += instance.OnTest;
+                @TouchPressDown.started += instance.OnTouchPressDown;
+                @TouchPressDown.performed += instance.OnTouchPressDown;
+                @TouchPressDown.canceled += instance.OnTouchPressDown;
+                @TouchPressUp.started += instance.OnTouchPressUp;
+                @TouchPressUp.performed += instance.OnTouchPressUp;
+                @TouchPressUp.canceled += instance.OnTouchPressUp;
             }
         }
     }
@@ -252,5 +297,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnTouch(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
+        void OnTouchPressDown(InputAction.CallbackContext context);
+        void OnTouchPressUp(InputAction.CallbackContext context);
     }
 }

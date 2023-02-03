@@ -217,7 +217,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: C:/FMOD Studio/gamejam2023/gamejam2023.fspro
-  sourceBankPath: C:/FMOD Studio/gamejam2023/Build
+  sourceBankPath: Assets/FMODStudio/Mobile
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Master
+  - Desktop/GameJam
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

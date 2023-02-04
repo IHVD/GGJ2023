@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Root : MonoBehaviour
 {
 
@@ -29,7 +29,7 @@ public class Root : MonoBehaviour
 
 		float distance = Vector2.Distance(transform.position, target.position);
 		root.material.mainTextureScale = new Vector2(distance / 10f, .1f);
-	}*/
+	}
 
     [Header("General Refernces:")]
     public RootShooter rootShootGun;
@@ -38,6 +38,8 @@ public class Root : MonoBehaviour
     [Header("General Settings:")]
     [SerializeField] private int precision = 40;
     [Range(0, 20)] [SerializeField] private float straightenLineSpeed = 5;
+
+    public int whichRootAmI;
 
     [Header("Rope Animation Settings:")]
     public AnimationCurve ropeAnimationCurve;
@@ -52,14 +54,14 @@ public class Root : MonoBehaviour
 
     [HideInInspector] public bool isGrappling = true;
 
-    bool strightLine = true;
+    bool straightLine = true;
 
     private void OnEnable()
     {
         moveTime = 0;
         m_lineRenderer.positionCount = precision;
         waveSize = StartWaveSize;
-        strightLine = false;
+        straightLine = false;
 
         LinePointsToFirePoint();
 
@@ -88,11 +90,11 @@ public class Root : MonoBehaviour
 
     void DrawRope()
     {
-        if (!strightLine)
+        if (!straightLine)
         {
-            if (m_lineRenderer.GetPosition(precision - 1).x == rootShootGun.grapplePoint.x)
+            if (m_lineRenderer.GetPosition(precision - 1).x == rootShootGun.grapplePoint[whichRootAmI].x)
             {
-                strightLine = true;
+                straightLine = true;
             }
             else
             {
@@ -101,11 +103,11 @@ public class Root : MonoBehaviour
         }
         else
         {
-            if (!isGrappling)
-            {
-                rootShootGun.Grapple();
+            //if (!isGrappling)
+            //{
+                //rootShootGun.Grapple();
                 isGrappling = true;
-            }
+            //}
             if (waveSize > 0)
             {
                 waveSize -= Time.deltaTime * straightenLineSpeed;
@@ -128,7 +130,7 @@ public class Root : MonoBehaviour
         {
             float delta = (float)i / ((float)precision - 1f);
             Vector2 offset = Vector2.Perpendicular(rootShootGun.grappleDistanceVector).normalized * ropeAnimationCurve.Evaluate(delta) * waveSize;
-            Vector2 targetPosition = Vector2.Lerp(rootShootGun.firePoint.position, rootShootGun.grapplePoint, delta) + offset;
+            Vector2 targetPosition = Vector2.Lerp(rootShootGun.firePoint.position, rootShootGun.grapplePoint[whichRootAmI], delta) + offset;
             Vector2 currentPosition = Vector2.Lerp(rootShootGun.firePoint.position, targetPosition, ropeProgressionCurve.Evaluate(moveTime) * ropeProgressionSpeed);
 
             m_lineRenderer.SetPosition(i, currentPosition);
@@ -138,6 +140,7 @@ public class Root : MonoBehaviour
     void DrawRopeNoWaves()
     {
         m_lineRenderer.SetPosition(0, rootShootGun.firePoint.position);
-        m_lineRenderer.SetPosition(1, rootShootGun.grapplePoint);
+        m_lineRenderer.SetPosition(1, rootShootGun.grapplePoint[whichRootAmI]);
     }
 }
+*/

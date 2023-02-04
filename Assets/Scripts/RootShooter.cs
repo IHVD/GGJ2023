@@ -7,7 +7,7 @@ using DG.Tweening;
 public class RootShooter : MonoBehaviour
 {
     [Header("Gameplay Variables:")]
-    public int rootAmount;
+    [Min(1)] public int rootAmount;
     public int currentRoots;
 
     [Header("Rotation:")]

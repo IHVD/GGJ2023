@@ -21,9 +21,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (KrisWantsToTestShit)
-            return;
-        
         backgroundInstance = new GameObject [bkgSpawnPoints.Length];
         for (int i = 0; i <bkgSpawnPoints.Length; i++)
         {
@@ -47,7 +44,7 @@ public class GameManager : MonoBehaviour
             backgroundInstance[i].transform.position -= new Vector3(0, bkgSpeed * Time.deltaTime, 0);
 
         }
-        bkgSpeed += speedIncrement * Time.deltaTime;
+        if (!KrisWantsToTestShit) bkgSpeed += speedIncrement * Time.deltaTime;
 
         for (int i = 0; i < wallSpawnPoints.Length; i++)
         {
@@ -55,6 +52,6 @@ public class GameManager : MonoBehaviour
 
         }
 
-        speed += speedIncrement * Time.deltaTime;
+        if (!KrisWantsToTestShit) speed += speedIncrement * Time.deltaTime;
     }
 }

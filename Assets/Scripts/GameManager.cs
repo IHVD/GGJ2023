@@ -12,9 +12,8 @@ public class GameManager : MonoBehaviour
     public float speed = 1.0f;
     public float bkgSpeed = 1.2f;
     public float speedIncrement = 0.1f;
-    public float scoreFloat;
-    public int score;
-    public int highscore;
+    
+   
     public bool isDead;
     
     
@@ -24,9 +23,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Load();
-        isDead = false;
-        scoreFloat = 0.0f;
+        
         backgroundInstance = new GameObject [bkgSpawnPoints.Length];
         for (int i = 0; i <bkgSpawnPoints.Length; i++)
         {
@@ -61,39 +58,11 @@ public class GameManager : MonoBehaviour
         
 
     }
-    public void Save()
-    {
-        PlayerPrefs.SetInt("highscore", highscore);
-    }
-
-    public void Load()
-    {
-        highscore = PlayerPrefs.GetInt("highscore");
-    }
-
-    private void FixedUpdate()
-    {
-
-        scoreFloat += Time.deltaTime;
-        int score = (int)scoreFloat * 7;
-        Debug.Log("Score:" + score);
-
-        if (isDead == true) //Use this to end game
-        {
-            Save();
-        
-            if (score > highscore)
-            {
-                highscore = score;
-            }
-            Debug.Log("GAME OVER");
-            Debug.Log("Highscore: " + highscore);
-
-        }
-
-        
-
-    }
+   
 
    
+
+    
+
+
 }

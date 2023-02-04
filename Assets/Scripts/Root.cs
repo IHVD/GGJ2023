@@ -34,6 +34,7 @@ public class Root : MonoBehaviour
     [Header("General Refernces:")]
     public RootShooter rootShootGun;
     public LineRenderer m_lineRenderer;
+    public GameObject rootTip;
 
     [Header("General Settings:")]
     [SerializeField] private int precision = 40;
@@ -103,7 +104,7 @@ public class Root : MonoBehaviour
         {
             if (!isGrappling)
             {
-                rootShootGun.Grapple();
+                //rootShootGun.Grapple();
                 isGrappling = true;
             }
             if (waveSize > 0)
@@ -132,6 +133,7 @@ public class Root : MonoBehaviour
             Vector2 currentPosition = Vector2.Lerp(rootShootGun.firePoint.position, targetPosition, ropeProgressionCurve.Evaluate(moveTime) * ropeProgressionSpeed);
 
             m_lineRenderer.SetPosition(i, currentPosition);
+            AddTippy(currentPosition);
         }
     }
 
@@ -140,4 +142,9 @@ public class Root : MonoBehaviour
         m_lineRenderer.SetPosition(0, rootShootGun.firePoint.position);
         m_lineRenderer.SetPosition(1, rootShootGun.grapplePoint);
     }
+
+    void AddTippy(Vector3 position)
+	{
+        rootTip.transform.position = position;
+	}
 }

@@ -153,6 +153,7 @@ MonoBehaviour:
   bkgSpeed: 1.3
   speedIncrement: 0.1
   isDead: 0
+  KrisWantsToTestShit: 1
 --- !u!1 &1459532934
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,98 +226,6 @@ Transform:
   m_Father: {fileID: 1459532935}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1762229108
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762229111}
-  - component: {fileID: 1762229110}
-  - component: {fileID: 1762229109}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1762229111
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762229108}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.187589, y: 9.9, z: -96.9227}
-  m_LocalScale: {x: 4.846135, y: 4.846135, z: 4.846135}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2052106262578246629}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1762229110
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762229108}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &1762229109
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762229108}
-  m_Enabled: 1
 --- !u!1 &2052106260811996882
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052106260811996881}
   - component: {fileID: 2052106260811996911}
+  - component: {fileID: 1066930843}
   m_Layer: 0
   m_Name: RootShooter
   m_TagString: Untagged
@@ -342,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052106260811996882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.14, y: 0, z: 0}
+  m_LocalPosition: {x: 6.3, y: 0, z: 0}
   m_LocalScale: {x: 0.55, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -402,6 +312,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1066930843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052106260811996882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c732ce340a346f4581632eefb5b79ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootAmount: 3
+  currentRoots: 0
+  rotateOverTime: 1
+  rotationSpeed: 4
+  rootShootPivot: {fileID: 2052106261617535762}
+  r2d: {fileID: 2052106262578246631}
+  grapplePoint: []
+  grappleDistanceVector: {x: 0, y: 0}
+  lr: {fileID: 5764555022745019157}
+  grappleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  moveSpeed: 50
+  grappleLength: 500
 --- !u!1 &2052106261617535763
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052106261617535763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -476,12 +412,10 @@ GameObject:
   - component: {fileID: 2052106262578246629}
   - component: {fileID: 2052106262578246630}
   - component: {fileID: 2052106262578246631}
-  - component: {fileID: 2052106262578246632}
   - component: {fileID: 2052106262578246633}
   - component: {fileID: 409192266666929908}
   - component: {fileID: 1780877809996870699}
   - component: {fileID: 5764555022745019157}
-  - component: {fileID: 8301104458743993656}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -502,7 +436,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2052106261617535762}
-  - {fileID: 1762229111}
   - {fileID: 1337790311}
   - {fileID: 1459532935}
   m_Father: {fileID: 0}
@@ -569,13 +502,13 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052106262578246634}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -587,27 +520,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!231 &2052106262578246632
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052106262578246634}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 1
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 1.3000001
-  m_DampingRatio: 1
-  m_Frequency: 1
 --- !u!58 &2052106262578246633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -692,7 +604,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d42c3c6d7a6bf6c4d81bca3118c65deb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -718,7 +630,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.25
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -764,8 +676,8 @@ LineRenderer:
       m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 1
+    numCapVertices: 10
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
@@ -775,29 +687,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &8301104458743993656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052106262578246634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c732ce340a346f4581632eefb5b79ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rootAmount: 3
-  currentRoots: 0
-  r2d: {fileID: 2052106262578246631}
-  grapplePoint: []
-  grappleDistanceVector: {x: 0, y: 0}
-  lr: {fileID: 5764555022745019157}
-  grappleMask:
-    serializedVersion: 2
-    m_Bits: 0
-  moveSpeed: 23
-  grappleLength: 5
 --- !u!1 &4819598957470682586
 GameObject:
   m_ObjectHideFlags: 0

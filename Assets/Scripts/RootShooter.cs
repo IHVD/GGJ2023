@@ -10,6 +10,12 @@ public class RootShooter : MonoBehaviour
     public int rootAmount;
     public int currentRoots;
 
+    [Header("Rotation:")]
+    [SerializeField] private bool rotateOverTime = true;
+    [Range(0, 60)] [SerializeField] private float rotationSpeed = 4;
+
+    public Transform rootShootPivot;
+
     public Rigidbody2D r2d;
 
     public List<Vector2> grapplePoint;
@@ -105,11 +111,13 @@ public class RootShooter : MonoBehaviour
                 }
             }
         }*/
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos.z = -10f;
+        Vector2 direction = (mousePos - transform.position).normalized;
 
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+            Debug.DrawRay(transform.position, direction * grappleLength, Color.magenta, 10f);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleLength, grappleMask);
             if (hit.collider != null)
             {
@@ -160,20 +168,20 @@ public class RootShooter : MonoBehaviour
         return center;
     }
 
-    //void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
-    //{
-    //    Vector3 distanceVector = lookPoint - rootShootPivot.position;
-    //
-    //    float angle = Mathf.Atan2(distanceVector.y, distanceVector.x) * Mathf.Rad2Deg;
-    //    if (rotateOverTime && allowRotationOverTime)
-    //    {
-    //        rootShootPivot.rotation = Quaternion.Lerp(rootShootPivot.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * rotationSpeed);
-    //    }
-    //    else
-    //    {
-    //        rootShootPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    //    }
-    //}
+    void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
+    {
+        Vector3 distanceVector = lookPoint - rootShootPivot.position;
+    
+        float angle = Mathf.Atan2(distanceVector.y, distanceVector.x) * Mathf.Rad2Deg;
+        if (rotateOverTime && allowRotationOverTime)
+        {
+            rootShootPivot.rotation = Quaternion.Lerp(rootShootPivot.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * rotationSpeed);
+        }
+        else
+        {
+            rootShootPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+    }
 
     /*void SetGrapplePoint(int rootToShoot)
     {

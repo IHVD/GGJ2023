@@ -104,7 +104,7 @@ public class Root : MonoBehaviour
         {
             if (!isGrappling)
             {
-                //rootShootGun.Grapple();
+                rootShootGun.Grapple();
                 isGrappling = true;
             }
             if (waveSize > 0)
@@ -140,7 +140,7 @@ public class Root : MonoBehaviour
         if (waveSize <= 0)
         {
 			if (rootShootGun.hitObject.CompareTag("Rock")){
-                //rootShootGun.hitObject.GetComponent<RockObstacle>().isGrab = true;
+                rootShootGun.hitObject.GetComponent<RockObstacle>().isGrab = true;
                 rootShootGun.CancelGrapple();
                 Debug.Log("attached to rock");
 			}

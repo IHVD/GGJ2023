@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
 
-public class AudioManager : MonoBehaviour
-{
-    public static AudioManager instance 
-    { 
-        get; private set;
-    }
+
+public class AudioManager : MonoBehaviour {
+
 
     FMOD.Studio.Bus Music;
     FMOD.Studio.Bus SFX;
@@ -21,33 +17,16 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         Music = FMODUnity.RuntimeManager.GetBus("Bus:/Master/Music");
-        SFX = FMODUnity.RuntimeManager.GetBus("Bus:/Master/SFX");
-        Master = FMODUnity.RuntimeManager.GetBus("Bus:/Master");
-        
-
-        if (instance != null)
-        {
-            Debug.LogError("Foundmore audio managers");
-        }
-        instance = this;
-
-
+        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
+        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
     }
 
-    public void PlayOneShot(EventReference sound, Vector3 worldpos)
-    {
-        RuntimeManager.PlayOneShot(sound, worldpos);
-    }
-
-
-    void update()
+    void Update()
     {
         Music.setVolume (MusicVolume);
-        SFX.setVolume(SFXVolume);
-        Master.setVolume(MasterVolume);
-
+        SFX.setVolume (SFXVolume);
+        Master.setVolume (MasterVolume);
     }
-
 
     public void MasterVolumeLevel(float newMasterVolume)
     {
@@ -63,7 +42,5 @@ public class AudioManager : MonoBehaviour
     {
         SFXVolume = newSFXVolume;
     }
-
-    
 
 }

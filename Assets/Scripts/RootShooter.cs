@@ -117,7 +117,7 @@ public class RootShooter : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.DrawRay(transform.position, direction * grappleLength, Color.magenta, 10f);
+            //Debug.DrawRay(transform.position, direction * grappleLength, Color.magenta, 10f);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleLength, grappleMask);
             if (hit.collider != null)
             {

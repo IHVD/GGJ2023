@@ -2,26 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallDelete : MonoBehaviour
+public class backgroundDelete : MonoBehaviour
 {
     public GameObject spawn;
-    public GameObject wallDelete;
+    public GameObject bkgDelete;
 
     // Start is called before the first frame update
     void Start()
     {
-        wallDelete = GameObject.Find("Wallus Deletus");
+        bkgDelete = GameObject.Find("Backus Deletus");
         spawn = GameObject.Find("WallSpawn4");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y <= wallDelete.transform.position.y)
+        if (transform.position.y < bkgDelete.transform.position.y)
         {
-            transform.position = new Vector2(-3.5f, spawn.transform.position.y);
+            transform.position = new Vector2(0, spawn.transform.position.y);
         }
     }
-
-   
 }

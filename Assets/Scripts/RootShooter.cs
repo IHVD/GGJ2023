@@ -64,13 +64,17 @@ public class RootShooter : MonoBehaviour
         actualMousePos.z = -20f;
 
 
-        Touch touch = Input.GetTouch(0);
+        Touch touch = new Touch();
+        if (Input.touchCount > 0)
+        {
+            touch = Input.GetTouch(0);
+        }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) || touch.phase == TouchPhase.Began)
+        if (Input.GetKeyDown(KeyCode.Mouse0) || touch.phase == TouchPhase.Began && Input.touchCount > 0)
         {
             SetGrapplePoint();
         }
-        else if (Input.GetKey(KeyCode.Mouse0) || touch.phase == TouchPhase.Moved)
+        else if (Input.GetKey(KeyCode.Mouse0) || touch.phase == TouchPhase.Moved && Input.touchCount > 0)
         {
             if (grappleRope.enabled)
             {
@@ -84,7 +88,7 @@ public class RootShooter : MonoBehaviour
                 RotateGun(screenpos, true);
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) || touch.phase == TouchPhase.Ended)
+        else if (Input.GetKeyUp(KeyCode.Mouse0) || touch.phase == TouchPhase.Ended && Input.touchCount > 0)
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;

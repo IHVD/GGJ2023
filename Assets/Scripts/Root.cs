@@ -52,14 +52,14 @@ public class Root : MonoBehaviour
 
     [HideInInspector] public bool isGrappling = true;
 
-    bool strightLine = true;
+    bool straightLine = true;
 
     private void OnEnable()
     {
         moveTime = 0;
         m_lineRenderer.positionCount = precision;
         waveSize = StartWaveSize;
-        strightLine = false;
+        straightLine = false;
 
         LinePointsToFirePoint();
 
@@ -88,11 +88,11 @@ public class Root : MonoBehaviour
 
     void DrawRope()
     {
-        if (!strightLine)
+        if (!straightLine)
         {
             if (m_lineRenderer.GetPosition(precision - 1).x == rootShootGun.grapplePoint.x)
             {
-                strightLine = true;
+                straightLine = true;
             }
             else
             {

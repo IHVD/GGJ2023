@@ -21,7 +21,7 @@ public class RootShooter : MonoBehaviour
     public Transform firePoint;
 
     [Header("Physics Ref:")]
-    //public SpringJoint2D m_springJoint2D;
+    public SpringJoint2D m_springJoint2D;
     public Rigidbody2D m_rigidbody;
 
     [Header("Rotation:")]
@@ -57,7 +57,7 @@ public class RootShooter : MonoBehaviour
     {
         grappleRope.enabled = false;
         grappleRope.rootTip.SetActive(false);
-        //m_springJoint2D.enabled = false;
+        m_springJoint2D.enabled = false;
 
     }
 
@@ -130,7 +130,7 @@ public class RootShooter : MonoBehaviour
 	{
         grappleRope.enabled = false;
         grappleRope.rootTip.SetActive(false);
-        //m_springJoint2D.enabled = false;
+        m_springJoint2D.enabled = false;
         m_rigidbody.gravityScale = 1;
     }
 
@@ -153,6 +153,46 @@ public class RootShooter : MonoBehaviour
 
                     hitObject = _hit.transform.gameObject;
                 }
+            }
+        }
+    }
+
+    public void Grapple()
+    {
+        m_springJoint2D.autoConfigureDistance = false;
+        if (!launchToPoint && !autoConfigureDistance)
+        {
+            m_springJoint2D.distance = targetDistance;
+            m_springJoint2D.frequency = targetFrequency;
+        }
+        if (!launchToPoint)
+        {
+            if (autoConfigureDistance)
+            {
+                m_springJoint2D.autoConfigureDistance = true;
+                m_springJoint2D.frequency = 0;
+            }
+
+            m_springJoint2D.connectedAnchor = grapplePoint;
+            m_springJoint2D.enabled = true;
+        }
+        else
+        {
+            switch (launchType)
+            {
+                case LaunchType.Physics_Launch:
+                    m_springJoint2D.connectedAnchor = grapplePoint;
+
+                    Vector2 distanceVector = firePoint.position - rootShootHolder.position;
+
+                    m_springJoint2D.distance = distanceVector.magnitude;
+                    m_springJoint2D.frequency = launchSpeed;
+                    m_springJoint2D.enabled = true;
+                    break;
+                case LaunchType.Transform_Launch:
+                    m_rigidbody.gravityScale = 0;
+                    m_rigidbody.velocity = Vector2.zero;
+                    break;
             }
         }
     }

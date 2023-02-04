@@ -63,11 +63,14 @@ public class RootShooter : MonoBehaviour
         Vector3 actualMousePos = Input.mousePosition;
         actualMousePos.z = -20f;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        Touch touch = Input.GetTouch(0);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) || touch.phase == TouchPhase.Began)
         {
             SetGrapplePoint();
         }
-        else if (Input.GetKey(KeyCode.Mouse0))
+        else if (Input.GetKey(KeyCode.Mouse0) || touch.phase == TouchPhase.Moved)
         {
             if (grappleRope.enabled)
             {
@@ -75,11 +78,13 @@ public class RootShooter : MonoBehaviour
             }
             else
             {
-                Vector2 mousePos = m_camera.ScreenToWorldPoint(actualMousePos);
-                RotateGun(mousePos, true);
+                Vector2 screenpos = new Vector2(0,0);
+                screenpos = m_camera.ScreenToWorldPoint(Input.touchCount > 0 ? touch.position : actualMousePos);
+
+                RotateGun(screenpos, true);
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        else if (Input.GetKeyUp(KeyCode.Mouse0) || touch.phase == TouchPhase.Ended)
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
@@ -87,14 +92,14 @@ public class RootShooter : MonoBehaviour
         }
         else
         {
-            Vector2 mousePos = m_camera.ScreenToWorldPoint(actualMousePos);
+            Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.touchCount > 0 ? touch.position : actualMousePos);
             RotateGun(mousePos, true);
             if (launchToPoint && grappleRope.isGrappling)
             {
                 if (launchType == LaunchType.Transform_Launch)
                 {
-                    Vector2 firePointDistnace = firePoint.position - rootShootHolder.localPosition;
-                    Vector2 targetPos = grapplePoint - firePointDistnace;
+                    Vector2 firePointDistance = firePoint.position - rootShootHolder.localPosition;
+                    Vector2 targetPos = grapplePoint - firePointDistance;
                     rootShootHolder.position = Vector2.Lerp(rootShootHolder.position, targetPos, Time.deltaTime * launchSpeed);
                 }
             }

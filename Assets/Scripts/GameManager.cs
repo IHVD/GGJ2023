@@ -12,17 +12,17 @@ public class GameManager : MonoBehaviour
     public float speed = 1.0f;
     public float bkgSpeed = 1.2f;
     public float speedIncrement = 0.1f;
-    
    
     public bool isDead;
+    public bool KrisWantsToTestShit;
     
-    
-
     private GameObject[] backgroundInstance;
     private GameObject[] foregroundInstance;
 
     void Start()
     {
+        if (KrisWantsToTestShit)
+            return;
         
         backgroundInstance = new GameObject [bkgSpawnPoints.Length];
         for (int i = 0; i <bkgSpawnPoints.Length; i++)
@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (KrisWantsToTestShit)
+            return;
+
         for (int i = 0; i < bkgSpawnPoints.Length; i++)
         {
             backgroundInstance[i].transform.position -= new Vector3(0, bkgSpeed * Time.deltaTime, 0);
@@ -53,16 +56,5 @@ public class GameManager : MonoBehaviour
         }
 
         speed += speedIncrement * Time.deltaTime;
-
-        
-        
-
     }
-   
-
-   
-
-    
-
-
 }

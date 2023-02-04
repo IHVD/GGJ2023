@@ -19,7 +19,7 @@ public class WallDelete : MonoBehaviour
     {
         if(transform.position.y < wallDelete.transform.position.y)
         {
-            transform.position = spawn.transform.position;
+            transform.position = new Vector2(-3.5f, spawn.transform.position.y);
         }
     }
 

@@ -32,6 +32,8 @@ public class RootShooter : MonoBehaviour
     [SerializeField] private bool hasMaxDistance = false;
     [SerializeField] private float maxDistance = 20;
 
+    [SerializeField] public GameObject hitObject;
+
     private enum LaunchType
     {
         Transform_Launch,
@@ -89,12 +91,9 @@ public class RootShooter : MonoBehaviour
                 RotateGun(screenpos, true);
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) || touch.phase == TouchPhase.Ended && Input.touchCount > 0)
+        else if (Input.GetKeyUp(KeyCode.Mouse0) || touch.phase == TouchPhase.Ended && Input.touchCount == 0)
         {
-            grappleRope.enabled = false;
-            grappleRope.rootTip.SetActive(false);
-            //m_springJoint2D.enabled = false;
-            m_rigidbody.gravityScale = 1;
+            CancelGrapple();
         }
         else
         {
@@ -127,6 +126,14 @@ public class RootShooter : MonoBehaviour
         }
     }
 
+    public void CancelGrapple()
+	{
+        grappleRope.enabled = false;
+        grappleRope.rootTip.SetActive(false);
+        //m_springJoint2D.enabled = false;
+        m_rigidbody.gravityScale = 1;
+    }
+
     void SetGrapplePoint()
     {
         Vector3 actualMousePos = Input.mousePosition;
@@ -143,6 +150,8 @@ public class RootShooter : MonoBehaviour
                     grappleDistanceVector = grapplePoint - (Vector2)rootShootPivot.position;
                     grappleRope.enabled = true;
                     grappleRope.rootTip.SetActive(true);
+
+                    hitObject = _hit.transform.gameObject;
                 }
             }
         }

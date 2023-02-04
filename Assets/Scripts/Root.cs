@@ -134,6 +134,16 @@ public class Root : MonoBehaviour
 
             m_lineRenderer.SetPosition(i, currentPosition);
             AddTippy(currentPosition);
+            //Debug.Log("attached");
+        }
+
+        if (waveSize <= 0)
+        {
+			if (rootShootGun.hitObject.CompareTag("Rock")){
+                //rootShootGun.hitObject.GetComponent<RockObstacle>().isGrab = true;
+                rootShootGun.CancelGrapple();
+                Debug.Log("attached to rock");
+			}
         }
     }
 

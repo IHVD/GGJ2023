@@ -12,18 +12,14 @@ public class GameManager : MonoBehaviour
     public float speed = 1.0f;
     public float bkgSpeed = 1.2f;
     public float speedIncrement = 0.1f;
-    
    
     public bool isDead;
     
-    
-
     private GameObject[] backgroundInstance;
     private GameObject[] foregroundInstance;
 
     void Start()
     {
-        
         backgroundInstance = new GameObject [bkgSpawnPoints.Length];
         for (int i = 0; i <bkgSpawnPoints.Length; i++)
         {
@@ -53,16 +49,5 @@ public class GameManager : MonoBehaviour
         }
 
         speed += speedIncrement * Time.deltaTime;
-
-        
-        
-
     }
-   
-
-   
-
-    
-
-
 }

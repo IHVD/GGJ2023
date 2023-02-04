@@ -583,7 +583,7 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - GameJam
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -20,9 +20,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;        
     }
 
-    public void Home()
+    public void menu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
+    }
+
+    public void Home()
+    {
+        Application.Quit();
+        Debug.Log("quited");
+;
     }
 }

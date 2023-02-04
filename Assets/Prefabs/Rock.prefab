@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2886479943352239554}
   - component: {fileID: 2886479943352239552}
   - component: {fileID: 2886479943352239553}
+  - component: {fileID: 1386437102}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 2886479944337450630}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2886479943352239552
 CircleCollider2D:
@@ -84,7 +85,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -96,6 +97,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1386437102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886479943352239555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88641a8c55ad84648b6a498a16f5f5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2886479943352239553}
+  isGrab: 0
 --- !u!1 &2886479944337450631
 GameObject:
   m_ObjectHideFlags: 0

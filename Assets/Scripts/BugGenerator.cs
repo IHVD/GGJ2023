@@ -11,12 +11,14 @@ public class BugGenerator : MonoBehaviour
     public float yMax = 1f;
     public float speed = 1f;
 
+    public Transform player;
+
     private void Start()
     {
         Vector3 startingPoint = new Vector3(pointAX, Random.Range(yMin, yMax), 0);
         Vector3 targetPoint = startingPoint.x == pointAX ? new Vector3(pointBX, Random.Range(yMin, yMax), 0) : new Vector3(pointAX, Random.Range(yMin, yMax), 0);
 
-        Debug.Log(startingPoint+ " " + targetPoint);
+        //Debug.Log(startingPoint+ " " + targetPoint);
         // Instantiate the prefab at the starting point
         GameObject instance = Instantiate(prefab, startingPoint, Quaternion.identity);
 
@@ -31,8 +33,21 @@ public class BugGenerator : MonoBehaviour
             instance.transform.position = Vector3.MoveTowards(instance.transform.position, targetPoint, Time.deltaTime * speed);
             yield return null;
         }
-
         Destroy(instance);
-    }
-}
 
+        SpawnBug();
+
+	}
+
+    public void SpawnBug()
+    {
+        
+		Vector3 startingPoint = new Vector3(pointAX, Random.Range(yMin, yMax) + player.transform.position.y + 20, 0);
+		Vector3 targetPoint = startingPoint.x == pointAX ? new Vector3(pointBX, Random.Range(yMin, yMax), 0) : new Vector3(pointAX, Random.Range(yMin, yMax), 0);
+
+		//Debug.Log(startingPoint+ " " + targetPoint);
+		// Instantiate the prefab at the starting point
+		GameObject instance = Instantiate(prefab, startingPoint, Quaternion.identity);
+		StartCoroutine(MoveFromPointToPoint(instance, startingPoint, targetPoint));
+	}
+}

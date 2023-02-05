@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8653186998172819264}
   - component: {fileID: 4487111825269205528}
   - component: {fileID: 8796456571660909443}
+  - component: {fileID: -5060010563611308190}
   m_Layer: 0
   m_Name: Bug2
   m_TagString: Untagged
@@ -203,6 +204,36 @@ MonoBehaviour:
   Event: 
   PlayEvent: 9
   StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &-5060010563611308190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150941419117071907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 817798364
+      Data2: 1286572438
+      Data3: 586538906
+      Data4: 668259116
+    Path: event:/SFX/bug/bugwalk
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

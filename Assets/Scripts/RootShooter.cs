@@ -7,6 +7,7 @@ public class RootShooter : MonoBehaviour
 {
     [Header("Scripts Ref:")]
     public Root grappleRope;
+    public ChasterMaster chasterMaster;
 
     [Header("Layers Settings:")]
     [SerializeField] private bool grappleToAll = false;
@@ -152,6 +153,8 @@ public class RootShooter : MonoBehaviour
                     grappleRope.rootTip.SetActive(true);
 
                     hitObject = _hit.transform.gameObject;
+
+                    chasterMaster.chaseOffset += 0.5f;
                 }
             }
         }

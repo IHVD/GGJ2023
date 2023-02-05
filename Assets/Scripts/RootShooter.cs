@@ -155,7 +155,7 @@ public class RootShooter : MonoBehaviour
         {
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, distanceVector.normalized);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/movement/Root", GetComponent<Transform>().position);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/movement/Hitwall", GetComponent<Transform>().position);
+            
 
             if (_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll)
             {

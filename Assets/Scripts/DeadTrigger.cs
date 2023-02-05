@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class DeadTrigger : MonoBehaviour
 {
-
+    public GameObject endPanel;
     public bool isDead;
     // Start is called before the first frame update
     void Start()
     {
+        endPanel.SetActive(false);
         isDead = false;
     }
 
@@ -18,6 +19,7 @@ public class DeadTrigger : MonoBehaviour
         if (isDead == true)
         {
             Time.timeScale = 0f;
+            endPanel.SetActive(true);
             Debug.Log("GAME OVER");
         }
     }

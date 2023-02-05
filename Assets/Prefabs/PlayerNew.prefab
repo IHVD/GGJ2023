@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 2065294661049735774}
+  chasterMaster: {fileID: 0}
   grappleToAll: 1
   grappableLayerNumber: 6
   m_camera: {fileID: 0}
@@ -562,6 +563,8 @@ GameObject:
   - component: {fileID: 395845602624844711}
   - component: {fileID: 1757846029075704184}
   - component: {fileID: 1080953457}
+  - component: {fileID: -9100531822267465815}
+  - component: {fileID: 5744948548247927307}
   m_Layer: 0
   m_Name: PlayerNew
   m_TagString: Player
@@ -585,7 +588,7 @@ Transform:
   - {fileID: 2065294660385846849}
   - {fileID: 59652117725506004}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2065294661371227829
 SpriteRenderer:
@@ -729,6 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280da0621e2ec1848b1c58177d22387c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 0}
   isDead: 0
 --- !u!231 &1080953457
 SpringJoint2D:
@@ -751,6 +755,49 @@ SpringJoint2D:
   m_Distance: 1.3
   m_DampingRatio: 1
   m_Frequency: 1
+--- !u!114 &-9100531822267465815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065294661371227833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 2065294661371227833}
+--- !u!114 &5744948548247927307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065294661371227833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1762366425
+      Data2: 1133917405
+      Data3: -1099871066
+      Data4: 1160957406
+    Path: event:/Music/MainMusic
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2065294661988080907
 GameObject:
   m_ObjectHideFlags: 0

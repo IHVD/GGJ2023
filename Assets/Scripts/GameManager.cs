@@ -14,15 +14,10 @@ public class GameManager : MonoBehaviour
     public float bkgSpeed = 1.2f;
     public float speedIncrement = 0.1f;
     public Rigidbody2D playerRb;
- 
-    
-   
+
     public bool isDead;
-    
-    
 
     private GameObject[] backgroundInstance;
-    private GameObject[] foregroundInstance;
 
     void Start()
     {
@@ -35,12 +30,6 @@ public class GameManager : MonoBehaviour
         {
             backgroundInstance[i] = Instantiate(backgroundPrefab, bkgSpawnPoints[i].position, Quaternion.identity);
         }
-
-        foregroundInstance = new GameObject[wallSpawnPoints.Length];
-        for (int i = 0; i < wallSpawnPoints.Length; i++)
-        {
-            foregroundInstance[i] = Instantiate(foregroundPrefab, wallSpawnPoints[i].position , Quaternion.identity);
-        }
     }
 
     void Update()
@@ -51,12 +40,6 @@ public class GameManager : MonoBehaviour
 
         }
         bkgSpeed += speedIncrement * Time.deltaTime;
-
-        for (int i = 0; i < wallSpawnPoints.Length; i++)
-        {
-            foregroundInstance[i].transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
-
-        }
 
         speed += speedIncrement * Time.deltaTime;
                       
@@ -70,12 +53,4 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    
-   
-
-   
-
-    
-
-
 }

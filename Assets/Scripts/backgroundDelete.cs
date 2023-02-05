@@ -11,7 +11,7 @@ public class backgroundDelete : MonoBehaviour
     void Start()
     {
         bkgDelete = GameObject.Find("Backus Deletus");
-        spawn = GameObject.Find("WallSpawn4");
+        spawn = GameObject.Find("BkgSpawn6");
     }
 
     // Update is called once per frame

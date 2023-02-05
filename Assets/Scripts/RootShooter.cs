@@ -80,21 +80,27 @@ public class RootShooter : MonoBehaviour
             {
                 Time.timeScale = 1f;
                 m_rigidbody.simulated= true;
+
             }
             SetGrapplePoint();
+
         }
         else if (Input.GetKey(KeyCode.Mouse0) || touch.phase == TouchPhase.Moved && Input.touchCount > 0)
         {
             if (grappleRope.enabled)
             {
                 RotateGun(grapplePoint, false);
+                
             }
             else
             {
+
                 Vector2 screenpos = new Vector2(0,0);
                 screenpos = m_camera.ScreenToWorldPoint(Input.touchCount > 0 ? touch.position : actualMousePos);
 
                 RotateGun(screenpos, true);
+
+
             }
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0) || touch.phase == TouchPhase.Ended && Input.touchCount == 0)
@@ -148,16 +154,21 @@ public class RootShooter : MonoBehaviour
         if (Physics2D.Raycast(firePoint.position, distanceVector))
         {
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, distanceVector.normalized);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/movement/Root", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/movement/Hitwall", GetComponent<Transform>().position);
+
             if (_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll)
             {
                 if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistance || !hasMaxDistance)
                 {
+                    
                     grapplePoint = _hit.point;
                     grappleDistanceVector = grapplePoint - (Vector2)rootShootPivot.position;
                     grappleRope.enabled = true;
                     grappleRope.rootTip.SetActive(true);
 
                     hitObject = _hit.transform.gameObject;
+                    
 
                     chasterMaster.chaseOffset += 0.5f;
                 }
@@ -211,6 +222,7 @@ public class RootShooter : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(firePoint.position, maxDistance);
+
         }
     }
 }

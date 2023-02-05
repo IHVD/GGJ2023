@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3553615562251533611}
   - component: {fileID: 3553615562251533610}
   - component: {fileID: 3553615562251533609}
+  - component: {fileID: 3263705116243336961}
   m_Layer: 0
   m_Name: MoleChaster
   m_TagString: Mole
@@ -151,3 +152,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.21, y: 0.58}
   m_EdgeRadius: 0
+--- !u!114 &3263705116243336961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553615562251533605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Finish
+  EventReference:
+    Guid:
+      Data1: -103691580
+      Data2: 1240807403
+      Data3: 1461315204
+      Data4: 259350793
+    Path: event:/SFX/mole/MoleMoving
+  Event: 
+  PlayEvent: 1
+  StopEvent: 5
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

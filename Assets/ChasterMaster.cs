@@ -23,10 +23,12 @@ public class ChasterMaster : MonoBehaviour
     {
         //r2d.DOMove(player.position, howLongUntilPlayer -= Time.deltaTime);
         //chaseOffset = Vector2.Lerp(transform.position, player.position, howLongUntilPlayer -= Time.deltaTime);
+
     }
 
 	private void FixedUpdate()
 	{
         transform.position = new Vector3(transform.position.x, player.position.y - chaseOffset + (distanceToPlayer += Time.deltaTime), transform.position.z);
+
 	}
 }

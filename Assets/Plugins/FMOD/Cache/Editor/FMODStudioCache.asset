@@ -22,11 +22,11 @@ MonoBehaviour:
   - {fileID: 5643201179517904421}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2112
+  Length: 1912
 --- !u!114 &-1279106975223129996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,12 +129,13 @@ MonoBehaviour:
   - {fileID: 5888736985076467143}
   - {fileID: -350795431089957709}
   - {fileID: -2000745248642801392}
+  - {fileID: 9041257344594358757}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5643201179517904421}
   StringsBanks:
   - {fileID: 2656026917285177869}
-  cacheTime: 638112056057489823
+  cacheTime: 638112077802099649
   cacheVersion: 131601
 --- !u!114 &2656026917285177869
 MonoBehaviour:
@@ -151,10 +152,10 @@ MonoBehaviour:
   Path: Assets/FMODStudio/Mobile/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638112056057489823
+  lastModified: 638112077802099649
   FileSizes:
   - Name: 
-    Value: 1114
+    Value: 1170
   Exists: 1
 --- !u!114 &2876748738358913161
 MonoBehaviour:
@@ -209,7 +210,7 @@ MonoBehaviour:
   Path: Assets/FMODStudio/Mobile/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638112056057469873
+  lastModified: 638112077802089679
   FileSizes: []
   Exists: 1
 --- !u!114 &5888736985076467143
@@ -239,3 +240,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 157714
+--- !u!114 &9041257344594358757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/mole/MoleMoving
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/mole/MoleMoving
+  Guid:
+    Data1: -103691580
+    Data2: 1240807403
+    Data3: 1461315204
+    Data4: 259350793
+  Banks:
+  - {fileID: 5643201179517904421}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400

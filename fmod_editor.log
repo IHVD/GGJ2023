@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000131954654E8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000013195463BC8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -23,14 +23,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 4912096
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9376
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000002A2219EFD8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000002A2306EF58
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF929413490
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF929413450
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF929413570
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF929413630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000013033431098
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000013032B3DBB8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 7
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX_Hit_Stab_Knife_3', format=2, channels=1, frequency=24000, lengthbytes=5344, lengthpcm=9728, pcmblocksize=256, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.331421.
@@ -39,14 +39,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 4912096
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9376
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000002A2219EFD8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000002A2306EF58
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF929413490
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF929413450
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF929413570
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF929413630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000013033431098
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000013032B3DBB8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 7
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX_Hit_Stab_Knife_2', format=2, channels=1, frequency=24000, lengthbytes=6592, lengthpcm=12032, pcmblocksize=256, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.303741.
@@ -55,71 +55,71 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 4912096
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9376
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000002A2219EFD8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000002A2306EF58
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF929413490
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF929413450
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF929413570
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF929413630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000013033431098
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000013032B3DBB8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 7
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX_Hit_Stab_Knife_1', format=2, channels=1, frequency=24000, lengthbytes=7008, lengthpcm=12800, pcmblocksize=256, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.386292.
-[LOG] SoundI::release                          : RootinandTootin (000001303ED2D268)
-[LOG] SoundI::release                          :     RootinandTootin (00000131990AB4A8)
-[LOG] SoundI::release                          :     RootinandTootin (0000012E9F826C38)
+[LOG] SoundI::release                          : RootinandTootin (00000131991E0F98)
+[LOG] SoundI::release                          :     RootinandTootin (000001303E55F408)
+[LOG] SoundI::release                          :     RootinandTootin (00000131822A4FB8)
 [LOG] Codec::release                           : Free PCM Buffer
 [LOG] SystemI::createSound                     : filename = Assets/FMODStudio/Mobile/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000013191D22A88, queue head = 0000013192824E58, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000013191D22A88
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001319D4E1CA8, queue head = 0000013197E7ECE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001319D4E1CA8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/FMODStudio/Mobile/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 4912096
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9376
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000013146636610
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000012E9F7E2A10
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='TestMusic', format=2, channels=2, frequency=24000, lengthbytes=682656, lengthpcm=624128, pcmblocksize=256, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.784912.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000013191D22A88
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001319D4E1CA8
 [LOG] SystemI::createSound                     : filename = Assets/FMODStudio/Mobile/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001303ED2D268, queue head = 0000013192824E58, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001303ED2D268
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001319599DD68, queue head = 0000013197E7ECE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001319599DD68
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/FMODStudio/Mobile/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 4912096
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9376
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000013034D10880
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001303F6AB560
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='RootinandTootin', format=2, channels=2, frequency=24000, lengthbytes=4140096, lengthpcm=3785216, pcmblocksize=256, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.653534.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001303ED2D268
-[LOG] SoundI::release                          : TestMusic (0000013191D22A88)
-[LOG] SoundI::release                          :     TestMusic (0000012E9F7E6098)
-[LOG] SoundI::release                          :     TestMusic (00000131827FB288)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001319599DD68
+[LOG] SoundI::release                          : TestMusic (000001319D4E1CA8)
+[LOG] SoundI::release                          :     TestMusic (00000131924F8568)
+[LOG] SoundI::release                          :     TestMusic (00000131534AF5C8)
 [LOG] Codec::release                           : Free PCM Buffer
-[LOG] SoundI::release                          : RootinandTootin (000001303ED2D268)
-[LOG] SoundI::release                          :     RootinandTootin (00000130B14DF2A8)
-[LOG] SoundI::release                          :     RootinandTootin (000001319D4E0F28)
+[LOG] SoundI::release                          : RootinandTootin (000001319599DD68)
+[LOG] SoundI::release                          :     RootinandTootin (00000131924FB148)
+[LOG] SoundI::release                          :     RootinandTootin (00000131534AF778)
 [LOG] Codec::release                           : Free PCM Buffer
-[LOG] SoundI::release                          :  (0000013194F22898)
-[LOG] SoundI::release                          :     SFX_Hit_Stab_Knife_1 (00000131990AB168)
-[LOG] SoundI::release                          :  (0000013194F22B78)
-[LOG] SoundI::release                          :     SFX_Hit_Stab_Knife_2 (00000131990AB988)
-[LOG] SoundI::release                          :  (0000013194F21FF8)
-[LOG] SoundI::release                          :     SFX_Hit_Stab_Knife_3 (00000131990AAAE8)
-[LOG] SoundI::release                          :  (0000013151B481F8)
-[LOG] SoundI::release                          :     SFX_Footstep_Dirt_1 (0000012E9F7E5538)
-[LOG] SoundI::release                          :  (0000013151B487B8)
-[LOG] SoundI::release                          :     SFX_Footstep_Dirt_2 (0000012E9F7E4D18)
-[LOG] SoundI::release                          :  (0000013151B48A98)
-[LOG] SoundI::release                          :     SFX_Footstep_Dirt_3 (0000012E9F7E5D58)
+[LOG] SoundI::release                          :  (0000013146A096F8)
+[LOG] SoundI::release                          :     SFX_Hit_Stab_Knife_1 (00000130B14E1328)
+[LOG] SoundI::release                          :  (0000013146A09588)
+[LOG] SoundI::release                          :     SFX_Hit_Stab_Knife_2 (00000130B14E1188)
+[LOG] SoundI::release                          :  (0000013146A09418)
+[LOG] SoundI::release                          :     SFX_Hit_Stab_Knife_3 (00000130B14E07C8)
+[LOG] SoundI::release                          :  (00000131824B76B8)
+[LOG] SoundI::release                          :     SFX_Footstep_Dirt_1 (0000013030FB3BC8)
+[LOG] SoundI::release                          :  (00000131824B70F8)
+[LOG] SoundI::release                          :     SFX_Footstep_Dirt_2 (0000013030FB4588)
+[LOG] SoundI::release                          :  (00000131824B7268)
+[LOG] SoundI::release                          :     SFX_Footstep_Dirt_3 (0000013030FB33A8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

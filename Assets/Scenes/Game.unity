@@ -571,6 +571,10 @@ PrefabInstance:
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 59652117387400146}
+    - target: {fileID: 2065294660654564285, guid: 7588ba7003c88a646994bfbb697b6841, type: 3}
+      propertyPath: chasterMaster
+      value: 
+      objectReference: {fileID: 222983756}
     - target: {fileID: 2065294661049735773, guid: 7588ba7003c88a646994bfbb697b6841, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.05

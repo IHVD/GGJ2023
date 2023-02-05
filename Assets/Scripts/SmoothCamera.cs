@@ -16,8 +16,9 @@ public class SmoothCamera : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 finalPosition = player.position + cameraOffset;
-        Vector3 lerpPosition = Vector3.Lerp(new Vector3(0, transform.position.y, transform.position.z), finalPosition, cameraSpeed);
-        transform.position = lerpPosition;
+        float yLerp = Mathf.Lerp(transform.position.y, finalPosition.y, cameraSpeed);
+        float zLerp = Mathf.Lerp(transform.position.z, finalPosition.z, cameraSpeed);
+        transform.position = new Vector3(0, yLerp, zLerp);
     }
 
 }

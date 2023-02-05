@@ -28,7 +28,7 @@ public class ChasterMaster : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        transform.position = new Vector3(transform.position.x, player.position.y - chaseOffset + (distanceToPlayer += Time.deltaTime), transform.position.z);
+        transform.position = new Vector3(transform.position.x, player.position.y - chaseOffset, transform.position.z);
 
 	}
 }

@@ -32,6 +32,7 @@ public class RootShooter : MonoBehaviour
     [Header("Distance:")]
     [SerializeField] private bool hasMaxDistance = false;
     [SerializeField] private float maxDistance = 20;
+    public float speedCap;
 
     [SerializeField] public GameObject hitObject;
 
@@ -121,6 +122,11 @@ public class RootShooter : MonoBehaviour
                 }
             }
         }
+
+        if(m_rigidbody.velocity.y > speedCap)
+        {
+            m_rigidbody.velocity = new Vector2(m_rigidbody.velocity.x, speedCap);
+        }
     }
 
     void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
@@ -168,9 +174,6 @@ public class RootShooter : MonoBehaviour
                     grappleRope.rootTip.SetActive(true);
 
                     hitObject = _hit.transform.gameObject;
-                    
-
-                    chasterMaster.chaseOffset += 0.5f;
                 }
             }
         }

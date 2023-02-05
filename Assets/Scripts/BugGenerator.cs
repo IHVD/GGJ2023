@@ -9,7 +9,7 @@ public class BugGenerator : MonoBehaviour
     public float pointBX;
     public float yMin = -1f;
     public float yMax = 1f;
-    public float speed = 1f;
+    public float speed = 5f;
 
     public Transform player;
 

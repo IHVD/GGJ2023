@@ -61,7 +61,7 @@ MonoBehaviour:
   speed: 1
   bkgSpeed: 1.3
   speedIncrement: 0.1
-  playerRb: {fileID: 0}
+  playerRb: {fileID: 2065294661371227828}
   isDead: 0
 --- !u!1 &59652117725506005
 GameObject:
@@ -395,7 +395,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.05
     widthCurve:
       serializedVersion: 2
       m_Curve:

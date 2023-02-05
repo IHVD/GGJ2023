@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public float bkgSpeed = 1.2f;
     public float speedIncrement = 0.1f;
     public Rigidbody2D playerRb;
-    public GameObject StartButton;
+ 
     
    
     public bool isDead;
@@ -58,19 +58,10 @@ public class GameManager : MonoBehaviour
         }
 
         speed += speedIncrement * Time.deltaTime;
-
-        
-        
-
+                      
     }
 
-    public void StartUnfreeze()
-    {
-        Time.timeScale = 1.0f;
-        playerRb.simulated = true;
-        StartButton.SetActive(false);
-
-    }
+    
    
 
    

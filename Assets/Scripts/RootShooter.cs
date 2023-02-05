@@ -75,6 +75,11 @@ public class RootShooter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) || touch.phase == TouchPhase.Began && Input.touchCount > 0)
         {
+            if(Time.timeScale == 0f && m_rigidbody.simulated == false)
+            {
+                Time.timeScale = 1f;
+                m_rigidbody.simulated= true;
+            }
             SetGrapplePoint();
         }
         else if (Input.GetKey(KeyCode.Mouse0) || touch.phase == TouchPhase.Moved && Input.touchCount > 0)

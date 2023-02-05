@@ -192,7 +192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b0444df146db9ab418124379849e549d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b45ad4308c1994e46ac6c4126983d4a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1737,6 +1737,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3553615562251533609, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.85186064
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553615562251533609, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.13593036
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553615562251533609, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553615562251533609, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553615562251533610, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c1bceea08871870468089636a23179d4, type: 2}
+    - target: {fileID: 3553615562251533611, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -222478780, guid: 3505b3a66d62b804e8a29aff0e317b0a, type: 3}
     m_RemovedComponents:
     - {fileID: 6497950140634962088, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
     m_RemovedGameObjects: []
@@ -1865,6 +1889,18 @@ PrefabInstance:
     - target: {fileID: 8760952748291663942, guid: c4e709365f86c1a40b51f7f57fc50f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760952748291663943, guid: c4e709365f86c1a40b51f7f57fc50f7d, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.09411766
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760952748291663943, guid: c4e709365f86c1a40b51f7f57fc50f7d, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.10980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760952748291663943, guid: c4e709365f86c1a40b51f7f57fc50f7d, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.19215688
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5770113709878287429, guid: c4e709365f86c1a40b51f7f57fc50f7d, type: 3}

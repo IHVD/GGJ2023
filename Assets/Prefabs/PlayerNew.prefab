@@ -588,7 +588,7 @@ Transform:
   - {fileID: 2065294660385846849}
   - {fileID: 59652117725506004}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2065294661371227829
 SpriteRenderer:
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 2065294661371227833}
 --- !u!114 &5744948548247927307
 MonoBehaviour:
   m_ObjectHideFlags: 0

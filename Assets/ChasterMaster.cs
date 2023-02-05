@@ -15,12 +15,18 @@ public class ChasterMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DOTween.SetTweensCapacity(1250, 50);
+        DOTween.SetTweensCapacity(31560, 50);
     }
 
     // Update is called once per frame
     void Update()
     {
-        r2d.DOMove(player.position, howLongUntilPlayer -= Time.deltaTime);
+        //r2d.DOMove(player.position, howLongUntilPlayer -= Time.deltaTime);
+        //chaseOffset = Vector2.Lerp(transform.position, player.position, howLongUntilPlayer -= Time.deltaTime);
     }
+
+	private void FixedUpdate()
+	{
+        transform.position = new Vector3(transform.position.x, player.position.y - chaseOffset + (distanceToPlayer += Time.deltaTime), transform.position.z);
+	}
 }

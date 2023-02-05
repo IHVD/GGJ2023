@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public float speed = 1.0f;
     public float bkgSpeed = 1.2f;
     public float speedIncrement = 0.1f;
+    public Rigidbody2D playerRb;
+    public GameObject StartButton;
     
    
     public bool isDead;
@@ -23,6 +25,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale= 0f;
+        playerRb.simulated = false;
+
         
         backgroundInstance = new GameObject [bkgSpawnPoints.Length];
         for (int i = 0; i <bkgSpawnPoints.Length; i++)
@@ -56,6 +61,14 @@ public class GameManager : MonoBehaviour
 
         
         
+
+    }
+
+    public void StartUnfreeze()
+    {
+        Time.timeScale = 1.0f;
+        playerRb.simulated = true;
+        StartButton.SetActive(false);
 
     }
    

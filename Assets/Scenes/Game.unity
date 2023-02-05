@@ -1295,6 +1295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNew
       objectReference: {fileID: 0}
+    - target: {fileID: 5744948548247927307, guid: 7588ba7003c88a646994bfbb697b6841, type: 3}
+      propertyPath: CollisionTag
+      value: Mole
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1677,6 +1681,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3263705116243336961, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: StopEvent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263705116243336961, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
+      propertyPath: CollisionTag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3553615562251533605, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
       propertyPath: m_Name
       value: MoleChaster
@@ -1725,7 +1737,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6497950140634962088, guid: 029ef3624fa1b1b45bd66e71218af13a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

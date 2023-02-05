@@ -26,6 +26,7 @@ public class DeadTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mole"))
         {
+            Debug.Log($"{other.gameObject.tag}, {other.gameObject.name}, mine is {gameObject.tag}");
             isDead = true;
         }
     }
